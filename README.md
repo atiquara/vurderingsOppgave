@@ -3,15 +3,25 @@
 
 # Oppgave 1:
 Oppgaven til den første koden jeg lagde var å utføre en operasjon på en matrise og returnerer minimum og maksimums verdiene for en spesifikk sti gjennom matrisen. Nå skal jeg forklare hvordan koden min fungerer i form av pseudokoding.
+
 Funksjonen MinMax(matrix) tar en matrise som input og returnerer minimums- og maksimumsverdiene for en bestemt sti i matrisen.
+
 Variablene rows og columns blir initialisert med antall rader og kolonner i matrisen.
+
 preMinPath og preMaxPath er initialiserte tabeller med den første verdien fra matrisen.
+
 En løkke itererer gjennom kolonnene i matrisen (unntatt den første). For hver kolonne legges verdien fra matrisen til den tilsvarende verdien i preMinPath og preMaxPath fra forrige kolonne.
+
 En annen løkke itererer gjennom radene i matrisen (unntatt den første). For hver rad opprettes tabellene minPath og maxPath med den første verdien fra matrisen pluss den tilsvarende verdien i preMinPath og preMaxPath fra første kolonne.
+
 En indre løkke itererer gjennom kolonnene i den gjeldende raden (unntatt den første). For hver kolonne beregnes den minste og største summen ved å sammenligne verdien i den gjeldende cellen med verdien fra preMinPath og minPath fra forrige kolonne.
+
 Minimums- og maksimumsverdiene blir deretter lagt til i minPath og maxPath ved å legge sammen verdien i matrisen med den minste og største summen.
+
 preMinPath og preMaxPath blir oppdatert til å være lik minPath og maxPath for å brukes i neste iterasjon.
+
 Til slutt returnerer funksjonen den siste verdien i preMinPath og preMaxPath, som tilsvarer minimums- og maksimumsverdien for stien gjennom matrisen.
+
 Husk at koden antar at alle rader i matrisen har samme antall kolonner, og at matrisen inneholder numeriske verdier.
 # Flytdiagram for koden:
 
