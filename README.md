@@ -1,4 +1,3 @@
-# vurderingsOppgave
 # Denne systemdokumentasjonen er generalisert for både Python og Lua koden jeg skrev for de 3 forskjellige besvarelsene.
 
 # Oppgave 1:
