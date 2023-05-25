@@ -23,6 +23,7 @@ Til slutt returnerer funksjonen den siste verdien i preMinPath og preMaxPath, so
 
 Husk at koden antar at alle rader i matrisen har samme antall kolonner, og at matrisen inneholder numeriske verdier.
 # Flytdiagram for koden:
+![image](https://github.com/atiquara/vurderingsOppgave/assets/111559588/12892eaf-4271-4c4f-9303-b9799913d6bb)
 
 
 # Oppgave 2:
