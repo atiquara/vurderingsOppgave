@@ -64,3 +64,4 @@ Etter definisjonen av funksjonen, blir det definert en labyrint som en todimensj
 
 Deretter kalles findPath-funksjonen med labyrinten som argument. Hvis findPath returnerer true, betyr det at veien til målet ble funnet, og meldingen "Veien er funnet!" blir skrev
 # Flytdiagram for koden:
+![image](https://github.com/atiquara/vurderingsOppgave/assets/111559588/ba28fdc8-078e-4d0a-973e-b58e6ae47ac2)
