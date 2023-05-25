@@ -1,7 +1,7 @@
 # Denne systemdokumentasjonen er generalisert for både Python og Lua koden jeg skrev for de 3 forskjellige besvarelsene.
 
 # Oppgave 1:
-Oppgaven til den første koden jeg lagde var å utføre en operasjon på en matrise og returnerer minimum og maksimums verdiene for en spesifikk sti gjennom matrisen. Nå skal jeg forklare hvordan koden min fungerer i form av pseudokoding.
+Oppgaven til den første koden jeg lagde var å utføre en operasjon på en matrise og returnerer minimum og maksimums verdiene for en spesifikk sti gjennom matrisen.
 
 Funksjonen MinMax(matrix) tar en matrise som input og returnerer minimums- og maksimumsverdiene for en bestemt sti i matrisen.
 
@@ -27,28 +27,25 @@ Husk at koden antar at alle rader i matrisen har samme antall kolonner, og at ma
 
 
 # Oppgave 2:
-Den neste oppgaven inneholdte å beregne den laveste og høyeste summen langs forskjellige lister med tall. La meg forklare hvordan koden min virker med hjelp av pseudokoding.
+Den neste oppgaven inneholdte å beregne den laveste og høyeste summen langs forskjellige lister med tall.
+Dette programmet inneholder to funksjoner: FindLowestSum og FindHighestSum, som begge tar inn en liste av lister som parameter. La oss se på hvordan koden fungerer:
 
-Først defineres det 10 forskjellige lister med tall. Disse listene representerer forskjellige veier.
+Funksjonen FindLowestSum finner den laveste summen av tallene i hver liste. Den oppretter en tom tabell cumulativeSums som vil inneholde de kumulative summene for hvert element. Deretter initialiseres den første listen i lists med de opprinnelige verdiene, og summen for hvert element i den første listen lagres i cumulativeSums[1].
 
-Deretter defineres funksjonen finn_vei, som tar inn en liste som parameter. Inne i funksjonen initialiseres variabler for laveste sum (min_sum), høyeste sum (max_sum) og nåværende posisjon (pos).
+Etter det går funksjonen gjennom de resterende listene i lists (fra andre til siste liste) og finner den laveste summen for hvert element. Den bruker en løkke som går gjennom hvert element i hver liste og utfører en indre løkke som sjekker de tre forrige elementene. Den beregner summen av det forrige elementet og gjeldende element, og oppdaterer minSum til å være den laveste summen funnet så langt. Deretter lagres den laveste summen i cumulativeSums-tabellen for det gjeldende elementet.
 
-Funksjonen går deretter gjennom hvert tall (value) i den gitte listen ved hjelp av en ipairs-løkke. For hvert tall søker den etter tilstøtende tall som har en differanse på 1 eller mindre. Den finner det laveste og høyeste tallet blant disse tilstøtende tallene og oppdaterer min_value og max_value henholdsvis. Den oppdaterer også posisjonen (pos) til å være indeksen til det tilstøtende tallet som gir den laveste eller høyeste verdien.
+Til slutt går funksjonen gjennom den siste listen i lists og finner den laveste summen ved å sammenligne hver sum i cumulativeSums[siste liste]. Den laveste summen blir lagret i variabelen lowestSum, og den blir returnert som resultat.
 
-Hvis det ikke blir funnet noen tilstøtende tall som oppfyller kriteriet, returnerer funksjonen nil.
+Funksjonen FindHighestSum fungerer på samme måte som FindLowestSum, men i stedet for å finne den laveste summen, finner den den høyeste summen. Den bruker en tilsvarende logikk, men denne gangen oppdateres maxSum til å være den høyeste summen funnet så langt.
 
-Hvis det blir funnet tilstøtende tall, legger funksjonen til den laveste verdien (min_value) i min_sum og den høyeste verdien (max_value) i max_sum.
+Etter definisjonen av de to funksjonene, blir det definert ti lister (liste1 til liste10), hver med forskjellige tallverdier. Deretter opprettes en liste lists som inneholder disse listene. Dette gjøres for å forkorte koden.
 
-Til slutt returnerer funksjonen de beregnede verdiene for laveste og høyeste sum.
-
-Etter definisjonen av funksjonen, kalles finn_vei-funksjonen med hver av de 10 tidligere definerte listene som argument. Resultatene av beregningene lagres i separate variabler.
-
-Til slutt skrives resultatene ut ved hjelp av print-funksjonen. Først skrives den totale laveste summen ut ved å legge sammen verdiene for hver vei. Deretter skrives den totale høyeste summen ut ved å legge sammen verdiene for hver vei.
+Til slutt blir funksjonene FindLowestSum og FindHighestSum kalt med lists som argument, og resultatene blir lagret i henholdsvis lowestSum og highestSum. Disse verdiene blir deretter skrevet ut ved hjelp av print-funksjonen.
 # Flytdiagram for koden:
-
+![image](https://github.com/atiquara/vurderingsOppgave/assets/111559588/5f3262c6-24af-4b39-af0b-d1296a1e259c)
 
 # Oppgave 3:
-Denne oppgaven krevde en labyrintsøker som går gjennom en labyrint lagd av en todimensjonal matrise for å finne slutten av labyrinten. La oss se hvordan dette ble kodet via forklaring med pseudokode.
+Denne oppgaven krevde en labyrintsøker som går gjennom en labyrint lagd av en todimensjonal matrise for å finne slutten av labyrinten.
 
 Først defineres funksjonen findPath som tar inn en labyrint (representert som en todimensjonal matrise) som parameter. Inne i funksjonen blir det definert flere hjelpefunksjoner.
 
